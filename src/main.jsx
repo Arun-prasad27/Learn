@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const rootElement = document.getElementById('root');
 
     if(rootElement) {
-        createRoot(rootElement). render(<App />);
+        createRoot(rootElement).render(<App />);
     } else {
-        console.log("The required mounting point #root was not found in index.html.");
+        console.error("The required mounting point #root was not found in index.html.");
     }
 });
