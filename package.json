@@ -2,7 +2,7 @@
   "name": "my-react-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://arun-prasad27.github.io/Learn",
+  "homepage": "https://arun-prasad27.github.io/Learn/",
   "type": "module",
   "scripts": {
     "dev": "vite",
