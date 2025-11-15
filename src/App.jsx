@@ -5,7 +5,7 @@ import ChatMessages from './Components/Chatmessages';
 import './App.css';
 
 function App() {
-    const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')));
+    const [chatMessages, setChatMessages] = useState(JSON.parse(localStorage.getItem('messages')) || []);
     //const [chatMessages, setChatMessages] = array; //shortcut array destructuring
     //const chatMessages = array[0];
     //const setChatMessages = array[1];
@@ -19,7 +19,9 @@ function App() {
     }, []);
 
     useEffect(() => {
+        if(chatMessages !== null) {
         localStorage.setItem('messages', JSON.stringify(chatMessages));
+        }
     }, [chatMessages]);
     
     return (
