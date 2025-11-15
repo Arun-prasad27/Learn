@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
 import './ChatMessage.css';
-import mechaImage from '../assets/mecha.png';
-import userImage from '../assets/round me 2.png';
+import mechaImage from '../assets/Mecha.png';
+import userImage from '../assets/round_me_2.png';
 
 export function ChatMessage({ message, sender, time }) {
     //const message = props.message;

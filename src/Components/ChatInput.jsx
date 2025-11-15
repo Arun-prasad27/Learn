@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Chatbot } from 'supersimpledev';
 import dayjs from 'dayjs';
 import './ChatInput.css';
-import loadingSpinner from '../assets/loading-spinner.gif';
+import loadingSpinner from '../assets/Loading_spinner.gif';
 
 export function ChatInput({chatMessages, setChatMessages}) {
     const [inputText, setInputText] = useState("");
