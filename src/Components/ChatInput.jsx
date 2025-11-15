@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Chatbot } from 'supersimpledev';
 import dayjs from 'dayjs';
 import './ChatInput.css';
+import loadingSpinner from '../assets/loading-spinner.gif';
 
 export function ChatInput({chatMessages, setChatMessages}) {
     const [inputText, setInputText] = useState("");
@@ -25,7 +26,7 @@ export function ChatInput({chatMessages, setChatMessages}) {
         setChatMessages([
             ...newChatMessages,
             {
-                message: <img src="../src/assets/loading-spinner.gif" className="loading-spinner"  />,
+                message: <img src={loadingSpinner} className="loading-spinner"  />,
                 sender: "robot",
                 id: crypto.randomUUID()
             }

@@ -1,5 +1,7 @@
 import dayjs from 'dayjs';
 import './ChatMessage.css';
+import mechaImage from '../assets/mecha.png';
+import userImage from '../assets/round me 2.png';
 
 export function ChatMessage({ message, sender, time }) {
     //const message = props.message;
@@ -18,7 +20,7 @@ export function ChatMessage({ message, sender, time }) {
     return (
         <div className={sender === "user" ? "chat-message-user" : "chat-message-robot"}>
            {sender === 'robot' && (
-            <img src="../src/assets/mecha.png" className='chat-message-profile'/>
+            <img src={mechaImage} className='chat-message-profile'/>
             )}
             <div className='chat-message-text'>
                 {message}
@@ -30,7 +32,7 @@ export function ChatMessage({ message, sender, time }) {
                 )}
             </div>
            {sender === 'user' && (
-            <img src="../src/assets/round me 2.png" className='chat-message-profile'/>
+            <img src={userImage} className='chat-message-profile'/>
             )}
         </div>
     );
